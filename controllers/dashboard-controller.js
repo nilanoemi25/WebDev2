@@ -11,11 +11,11 @@ export const dashboardController = {
   },
 
   async addPlaylist(request, response) {
-    const newPlayList = {
+    const newPlaylist = {
       title: request.body.title,
     };
     console.log(`adding playlist ${newPlaylist.title}`);
-    await playlistStore.addPlaylist(newPlayList);
+    await playlistStore.addPlaylist(newPlaylist);
     response.redirect("/dashboard");
   },
 };
