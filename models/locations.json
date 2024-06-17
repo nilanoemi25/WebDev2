@@ -1,0 +1,9 @@
+{
+  "file": "./models/locations.json",
+  "locations": [
+    {
+      "title": "Cork ",
+      "_id": "cbd4f425-d17e-4a5d-9f36-f7e4dbbdde62"
+    }
+  ]
+}
