@@ -1,37 +1,39 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
+/*
+import { trackStore } from "./track-store.js";  */ 
 
-const db = initStore("locations");
+const db = initStore("stations");
 
-export const locationStore = {
-  async getAllLocations() {
+export const stationStore = {
+  async getAllStations() {
     await db.read();
-    return db.data.locations;
+    return db.data.stations;
   },
 
-  async addLocation(location) {
+  async addStation(station) {
     await db.read();
-    location._id = v4();
-    db.data.locations.push(location);
+    station._id = v4();
+    db.data.stations.push(station);
     await db.write();
-    return location;
+    return station;
   },
 
-  async getLocationById(id) {
+   async getStationById(id) {
     await db.read();
-    const list = db.data.locations.find((location) => location._id === id);
+    const list = db.data.stations.find((station) => station._id === id);
     return list;
   },
 
-  async deleteLocationById(id) {
+  async deleteStationById(id) {
     await db.read();
-    const index = db.data.locations.findIndex((location) => location._id === id);
-    db.data.locations.splice(index, 1);
+    const index = db.data.stations.findIndex((station) => station._id === id);
+    db.data.stations.splice(index, 1);
     await db.write();
   },
 
-  async deleteAllLocation() {
-    db.data.locations = [];
+  async deleteAllStations() {
+    db.data.stations = [];
     await db.write();
   },
 };

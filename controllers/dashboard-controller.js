@@ -1,22 +1,22 @@
-import { locationStore } from "../models/station-store.js";
+import { stationStore } from "../models/station-store.js";
 
 export const dashboardController = {
   async index(request, response) {
     const viewData = {
       title: "WeatherTop Dashboard",
-      location: await locationStore.getAllLocations(),
+      station: await stationStore.getAllStations(),
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     
   },
   
-  async addLocation(request, response) {
-    const newLocation = {
+  async addStation(request, response) {
+    const newStation = {
       title: request.body.title,
     };
-    console.log(`adding location ${newLocation.title}`);
-    await locationStore.addLocation(newLocation);
+    console.log(`adding station ${newStation.title}`);
+    await stationStore.addStation(newStation);
     response.redirect("/dashboard");
   },
   

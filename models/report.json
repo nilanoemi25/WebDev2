@@ -1,0 +1,50 @@
+{
+  "file": "./models/report.json",
+  "report": [
+    {
+      "code": null,
+      "temperature": null,
+      "windspeed": null,
+      "winddirection": null,
+      "pressure": null,
+      "_id": "ac36dca8-01e6-4257-8c8c-5e8a95f7d46b",
+      "reportid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    },
+    {
+      "code": null,
+      "temperature": null,
+      "windspeed": null,
+      "winddirection": null,
+      "pressure": null,
+      "_id": "67f59aff-906e-43d6-99e2-4cf7ce684f48",
+      "reportid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    },
+    {
+      "code": null,
+      "temperature": null,
+      "windspeed": null,
+      "winddirection": null,
+      "pressure": null,
+      "_id": "fdb64cdd-2d39-4174-9773-42001edd7078",
+      "reportid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    },
+    {
+      "code": null,
+      "temperature": null,
+      "windspeed": null,
+      "winddirection": null,
+      "pressure": null,
+      "_id": "7e9adb39-b410-43b4-9abc-80c71548fe05",
+      "reportid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    },
+    {
+      "code": null,
+      "temperature": null,
+      "windspeed": null,
+      "winddirection": null,
+      "pressure": null,
+      "_id": "e0d4238e-9097-429a-ab60-158df9a01c9a",
+      "reportid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    }
+  ]
+}

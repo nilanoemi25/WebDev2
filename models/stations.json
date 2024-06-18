@@ -1,0 +1,9 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "title": "Waterford",
+      "_id": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    }
+  ]
+}

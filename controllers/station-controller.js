@@ -1,14 +1,31 @@
-import { locationStore } from "../models/station-store.js";
+import { stationStore } from "../models/station-store.js";
+import { reportStore } from "../models/report-store.js";
 
 
-export const locationController = {
+export const stationController = {
   async index(request, response) {
-    const location = await locationStore.getLocationById(request.params.id);
+    const station = await stationStore.getStationById(request.params.id);
     const viewData = {
-      title: "Location ",
-      location: location,
+      title: "Station ",
+      station: station,
     };
-    response.render("location-view", viewData);
+    console.log("reached index");
+    response.render("station-view", viewData);
   }, 
+ 
+  async addReport(request, response) {
+    const station = await stationStore.getStationById(request.params.id);
+    const newReport = {
+      title: request.body.title,
+      code: Number(request.body.code),
+      temperature: Number(request.body.temperature),
+      windspeed: Number(request.body.windspeed),
+      winddirection: Number(request.body.winddirection),
+      pressure: Number(request.body.pressure),   
+    };
+    console.log(`adding report ${newReport.code}`);
+    await reportStore.addReport(station._id, newReport);
+    response.redirect("/station/" + station._id);
+  },
 
 };
