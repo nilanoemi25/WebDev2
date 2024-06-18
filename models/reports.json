@@ -1,0 +1,14 @@
+{
+  "file": "./models/reports.json",
+  "reports": [
+    {
+      "code": 0,
+      "temperature": 0,
+      "windspeed": 0,
+      "winddirection": 0,
+      "pressure": 0,
+      "_id": "ef2d1364-a4d0-46e0-b832-58a6506e5ce9",
+      "stationid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    }
+  ]
+}

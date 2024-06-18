@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 
-const db = initStore("report");
+const db = initStore("reports");
 
 export const reportStore = {
   async getAllReports() {
@@ -9,18 +9,18 @@ export const reportStore = {
     return db.data.reports;
   },
 
-  async addReport(reportId, report) {
+  async addReport(stationId, report) {
     await db.read();
     report._id = v4();
-    report.reportid = reportId;
-    db.data.report.push(report);
+    report.stationid = stationId;
+    db.data.reports.push(report);
     await db.write();
     return report;
   },
 
-  async getReportsByReportId(id) {
+  async getReportsByStationId(id) {
     await db.read();
-    return db.data.reports.filter((report) => report.reportid === id);
+    return db.data.reports.filter((report) => report.stationid === id);
   },
 
   async getReportById(id) {
