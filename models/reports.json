@@ -9,6 +9,15 @@
       "pressure": 0,
       "_id": "ef2d1364-a4d0-46e0-b832-58a6506e5ce9",
       "stationid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
+    },
+    {
+      "code": 600,
+      "temperature": 1,
+      "windspeed": 150,
+      "winddirection": 125,
+      "pressure": 1,
+      "_id": "c64ad6a8-41c0-42ff-9c21-3a8ba698975d",
+      "stationid": "c4a26910-51b4-46cb-9a2b-ae8fdbcd55dc"
     }
   ]
 }
