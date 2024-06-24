@@ -1,12 +1,28 @@
 <div class="columns is-variable has-text-white  has-background-black">
-  <div class="column"> {{station.title}}  {{>icons/pin}}</div>
+  <div class="column"> {{station.title}}  {{>icons/pin}} <br>
+    Lat: {{station.latitude}} <br>
+    Long: {{station.longitude}}
+  </div>
   <div class="column is-1 has-background-white"></div>
   <div class="column"> Weather {{>icons/thunderstorm}}</div>
   <div class="column is-1 has-background-white"></div>
-  <div class="column"> Temp {{>icons/temp}}</div>
+  <div class="column"> 
+    Temp {{>icons/temp}} <br> 
+    Min: {{minTemp.temperature}} <br>
+    Max: {{maxTemp.temperature}}
+    </div>
   <div class="column is-1 has-background-white"></div>
-  <div class="column"> Wind  {{>icons/wind}} </div>
+  <div class="column"> 
+    Wind  {{>icons/wind}} <br>
+  Min: {{minWind.windspeed}} <br> 
+  Max: {{maxWind.windspeed}}
+  </div>
   <div class="column is-1 has-background-white"></div>
-  <div class="column"> Pressure {{>icons/pressure}}</div>
+  <div class="column"> 
+    Pressure {{>icons/pressure}} 
+    Min: {{minPressure.pressure}}  <br>
+    Max: {{maxPressure.pressure}}
+ </div>
+
 </div>
 

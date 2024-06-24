@@ -10,6 +10,13 @@
       "title": "Waterford",
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
       "_id": "bc1545dd-501a-4b9e-bb74-d1d7eb63a67c"
+    },
+    {
+      "title": "Test",
+      "latitude": 10005,
+      "longitude": 562,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "38e9ad27-2656-4248-9d43-15d09026b597"
     }
   ]
 }

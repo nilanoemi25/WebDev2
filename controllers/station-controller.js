@@ -1,14 +1,27 @@
 import { stationStore } from "../models/station-store.js";
 import {reportStore} from "../models/report-store.js"
+import { Analysis} from "../utils/analysis.js";
+
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
+    const minPressure = Analysis.getMinPressure(station);
+    const maxPressure = Analysis.getMaxPressure(station);
+    const minWind = Analysis.getMinWind(station);
+    const maxWind = Analysis.getMaxWind(station);
+    const minTemp = Analysis.getMinTemp(station); 
+    const maxTemp = Analysis.getMaxTemp(station);
     const viewData = {
-      title: "Station ",
+      title: "Station",
       station: station,
+      minPressure: minPressure,
+      maxPressure: maxPressure, 
+      minWind: minWind, 
+      maxWind: maxWind, 
+      minTemp: minTemp, 
+      maxTemp: maxTemp, 
     };
-    console.log("reached index");
     response.render("station-view", viewData);
   }, 
 
