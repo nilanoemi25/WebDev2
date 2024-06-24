@@ -1,16 +1,18 @@
 <table class="table is-fullwidth">
   <thead>
     <tr>
+      <th> Date </th>
       <th>Code</th>
       <th> Temp</th>
       <th>WindSpeed</th>
-      <th>WindDirection</th>
       <th>Pressure</th>
+      <th>WindDirection</th>
     </tr>
-  </thead>
+  </thead> 
   <tbody>
     {{#each station.reports}}
     <tr>
+      <td> {{date}} </td>
       <td>
         {{code}}
       </td>
@@ -21,10 +23,10 @@
         {{windspeed}}
       </td>
       <td>
-        {{winddirection}}
+        {{pressure}}
       </td>
       <td>
-        {{pressure}}
+        {{winddirection}}
       </td>
       <td>
          <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">

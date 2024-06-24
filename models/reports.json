@@ -45,6 +45,46 @@
       "pressure": 500,
       "_id": "9fe5fbdb-ad70-471e-a9b8-1f39f678fbb4",
       "stationid": "874c5249-3ab2-480f-b0b3-71c120a8b3bd"
+    },
+    {
+      "date": "2024-06-24T18:14:01.733Z",
+      "code": 300,
+      "temperature": 100,
+      "windspeed": 3,
+      "winddirection": null,
+      "pressure": 1,
+      "_id": "3fe25bf0-023e-4fd2-9d0e-7167aaac1378",
+      "stationid": "22afc0de-8046-4a69-90a5-595a3e880d40"
+    },
+    {
+      "date": "2024-06-24T18:23:16.238Z",
+      "code": 0,
+      "temperature": 0,
+      "windspeed": 0,
+      "winddirection": null,
+      "pressure": 0,
+      "_id": "31c50eb7-0607-493a-bfe0-63bc7aa423b3",
+      "stationid": "22afc0de-8046-4a69-90a5-595a3e880d40"
+    },
+    {
+      "date": "2024-06-24T18:23:19.175Z",
+      "code": 0,
+      "temperature": 0,
+      "windspeed": 0,
+      "winddirection": null,
+      "pressure": 0,
+      "_id": "28ae12f4-f4a0-462e-bbae-2b2b29413c28",
+      "stationid": "22afc0de-8046-4a69-90a5-595a3e880d40"
+    },
+    {
+      "date": "2024-06-24T18:24:00.349Z",
+      "code": 0,
+      "temperature": 0,
+      "windspeed": 0,
+      "winddirection": null,
+      "pressure": 0,
+      "_id": "388e553a-7955-459d-a205-bdac13f97cb0",
+      "stationid": "22afc0de-8046-4a69-90a5-595a3e880d40"
     }
   ]
 }

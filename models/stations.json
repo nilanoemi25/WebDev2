@@ -12,11 +12,12 @@
       "_id": "bc1545dd-501a-4b9e-bb74-d1d7eb63a67c"
     },
     {
-      "title": "Test",
-      "latitude": 10005,
-      "longitude": 562,
+      "title": "test",
+      "latitude": 0,
+      "longitude": 0,
+      "date": "2024-06-24T18:12:15.340Z",
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
-      "_id": "38e9ad27-2656-4248-9d43-15d09026b597"
+      "_id": "22afc0de-8046-4a69-90a5-595a3e880d40"
     }
   ]
 }
