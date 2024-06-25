@@ -11,7 +11,7 @@ async addReport(request, response) {
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
       windspeed: Number(request.body.windspeed),
-      winddirection: request.body.winddirection, 
+      winddirection: request.body.option, 
       pressure: Number(request.body.pressure),   
     };
     console.log(`adding report ${newReport.code}`);

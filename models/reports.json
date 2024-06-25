@@ -85,6 +85,15 @@
       "pressure": 0,
       "_id": "388e553a-7955-459d-a205-bdac13f97cb0",
       "stationid": "22afc0de-8046-4a69-90a5-595a3e880d40"
+    },
+    {
+      "date": "2024-06-25T17:04:12.009Z",
+      "code": 100,
+      "temperature": 13,
+      "windspeed": 111,
+      "pressure": 111,
+      "_id": "3312ab54-c889-4ad7-ab03-eb5acb031886",
+      "stationid": "874c5249-3ab2-480f-b0b3-71c120a8b3bd"
     }
   ]
 }
