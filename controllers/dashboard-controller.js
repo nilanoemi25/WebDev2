@@ -3,10 +3,11 @@ import { accountsController } from "./accounts-controller.js";
 
 export const dashboardController = {
   async index(request, response) {
-    const loggedInUser = await accountsController.getLoggedInUser(request);
+    const loggedInUser = await accountsController.getLoggedInUser(request); 
     const viewData = {
       title: "WeatherTop Dashboard",
-      station: await stationStore.getStationsByUserId(loggedInUser._id),
+      station: await stationStore.getStationsByUserId(loggedInUser._id),  
+      user: loggedInUser, 
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);

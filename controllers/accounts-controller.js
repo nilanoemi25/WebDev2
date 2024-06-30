@@ -20,6 +20,17 @@ export const accountsController = {
     response.redirect("/");
   },
 
+  async edit(request, response) {
+  const id = request.params.id; 
+    const viewData = {
+      title: "Edit User Details:", 
+      user: await userStore.getUserById(id), 
+     
+    }  
+    response.render("edit-user", viewData)
+  }, 
+
+
   signup(request, response) {
     const viewData = {
       title: "Login to WeatherApp",
@@ -45,8 +56,24 @@ export const accountsController = {
     }
   },
 
+
   async getLoggedInUser(request) {
     const userEmail = request.cookies.station;
     return await userStore.getUserByEmail(userEmail);
+  },
+
+  async update(request, response) {
+    
+    const updatedUser = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      email: request.body.email, 
+      password: Number(request.body.password),
+    };
+    const id = request.params.id; 
+    const user = await userStore.getUserById(id); 
+    console.log();
+    await userStore.updateUser(user, updatedUser); 
+    response.redirect("/");
   },
 };

@@ -2,10 +2,10 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "Noemi",
+      "firstName": "N",
       "lastName": "L",
       "email": "n11@gmail.com",
-      "password": "123456",
+      "password": 12345,
       "_id": "132cb9a6-f715-47c3-9075-fd646479bfbd"
     },
     {
