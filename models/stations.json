@@ -7,6 +7,27 @@
       "longitude": 0,
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
       "_id": "4ec7072b-2946-4d85-b894-92ea43f7f153"
+    },
+    {
+      "title": "Dublin ",
+      "latitude": 100,
+      "longitude": 400,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "454e4782-58f1-4631-97e4-0c3a7c62fab4"
+    },
+    {
+      "title": "Armagh",
+      "latitude": 0,
+      "longitude": 0,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "title": "Zulu",
+      "latitude": 0,
+      "longitude": 0,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "8bc71702-3994-4530-b8c8-026b84bb7289"
     }
   ]
 }

@@ -1,13 +1,17 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js"; 
 import { reportStore } from "../models/report-store.js";
+import { Alphabetical } from "../utils/alphabetical.js";
 
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request); 
+    const station = await stationStore.getStationsByUserId(loggedInUser._id);
+    const alphabetical = Alphabetical.sortStation(station); /* not working  */
     const viewData = {
       title: "WeatherTop Dashboard",
-      station: await stationStore.getStationsByUserId(loggedInUser._id),  
+      station: station, 
+      /*alpha: alphabetical, */
       user: loggedInUser, 
     };
     console.log("dashboard rendering");
@@ -32,7 +36,6 @@ export const dashboardController = {
     const stationId = request.params.id;
     console.log(`Deleting Station ${stationId}`);
     await stationStore.deleteStationById(stationId);
-    await reportStore.getReportsByStationIdAndDelete(stationId);
     response.redirect("/dashboard");
   },
   
