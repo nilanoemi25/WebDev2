@@ -3,8 +3,10 @@
   "stations": [
     {
       "title": "Cork ",
+      "latitude": 0,
+      "longitude": 0,
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
-      "_id": "874c5249-3ab2-480f-b0b3-71c120a8b3bd"
+      "_id": "4ec7072b-2946-4d85-b894-92ea43f7f153"
     }
   ]
 }

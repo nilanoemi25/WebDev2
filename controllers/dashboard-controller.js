@@ -32,7 +32,7 @@ export const dashboardController = {
     const stationId = request.params.id;
     console.log(`Deleting Station ${stationId}`);
     await stationStore.deleteStationById(stationId);
-    await reportStore.deleteAllReports(); 
+    await reportStore.getReportsByStationIdAndDelete(stationId);
     response.redirect("/dashboard");
   },
   
