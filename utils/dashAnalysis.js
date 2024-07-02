@@ -30,6 +30,7 @@ export const dashAnalysis = {
         
     },
 
+    /*
       getAveragePressure(station) {
       let avePressure= null;
       if (station.reports.length > 0) {
@@ -41,7 +42,7 @@ export const dashAnalysis = {
         }
       }
       return avePressure; 
-    },
+    }, */
        
 
     }
