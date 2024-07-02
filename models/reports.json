@@ -2,12 +2,39 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "date": "2024-06-30T11:26:19.416Z",
+      "date": "2024-07-02T19:06:22.585Z",
+      "code": 200,
+      "temperature": 10,
+      "windspeed": 0,
+      "pressure": 2,
+      "_id": "ac94d097-6259-496d-b0f5-dd03fb0d0a04",
+      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "date": "2024-07-02T19:06:33.630Z",
       "code": 500,
+      "temperature": 100,
+      "windspeed": 0,
+      "pressure": 2,
+      "_id": "78f7cdf3-49a7-4da0-93c9-18dfed8038d9",
+      "stationid": "4ec7072b-2946-4d85-b894-92ea43f7f153"
+    },
+    {
+      "date": "2024-07-02T19:24:08.327Z",
+      "code": 300,
+      "temperature": 10,
+      "windspeed": 10,
+      "pressure": 3,
+      "_id": "2d7b692e-9d0a-4877-b29d-d652bcc5bf2e",
+      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "date": "2024-07-02T19:24:17.510Z",
+      "code": 520,
       "temperature": 5,
-      "windspeed": 5,
-      "pressure": 5,
-      "_id": "78a2eddc-95a6-471b-8515-122458b9c340",
+      "windspeed": 150,
+      "pressure": 1,
+      "_id": "f28d0d3a-0687-4a9a-a8da-9a8ea6dabc10",
       "stationid": "4ec7072b-2946-4d85-b894-92ea43f7f153"
     }
   ]

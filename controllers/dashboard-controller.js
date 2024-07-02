@@ -2,18 +2,30 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js"; 
 import { reportStore } from "../models/report-store.js";
 import { Alphabetical } from "../utils/alphabetical.js";
+import { dashAnalysis } from "../utils/dashAnalysis.js";
 
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request); 
     const station = await stationStore.getStationsByUserId(loggedInUser._id);
-    const alphabetical = Alphabetical.sortStation(station); /* not working  */
+    const alphabetical = Alphabetical.sortStation(station); 
+    const reports = await reportStore.getAllReports(); 
     const viewData = {
       title: "WeatherTop Dashboard",
       station: station, 
-      /*alpha: alphabetical, */
       user: loggedInUser, 
     };
+    const sArray = dashAnalysis.getStations(station); 
+    let rId; 
+    for(let i = 0; i < sArray.length; i++){
+     rId = await reportStore.getReportsByStationId(sArray[i]);
+     const averagePressure = dashAnalysis.getAveragePressure(rId); /* Pass in station or station ID?  */
+    }
+    /*console.log(sArray.length);
+    console.log(rId); */ 
+
+
+
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     
