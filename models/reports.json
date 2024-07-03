@@ -45,6 +45,33 @@
       "pressure": 5,
       "_id": "ba7f7a55-bd05-47a9-9d57-e8b061c6a57f",
       "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "date": "2024-07-03T14:55:53.999Z",
+      "code": 200,
+      "temperature": 5,
+      "windspeed": 10,
+      "pressure": 1,
+      "_id": "dc68b3dc-fb88-44bb-8fe9-e75a8d636916",
+      "stationid": "4ec7072b-2946-4d85-b894-92ea43f7f153"
+    },
+    {
+      "date": "2024-07-03T15:37:23.800Z",
+      "code": 500,
+      "temperature": 10,
+      "windspeed": 6,
+      "pressure": 2,
+      "_id": "c8d8392e-5722-460a-b87a-7f807fa9d1c7",
+      "stationid": "507257fb-0f58-4c43-b186-597ba643fb45"
+    },
+    {
+      "date": "2024-07-03T15:37:32.145Z",
+      "code": 511,
+      "temperature": 10,
+      "windspeed": 5,
+      "pressure": 4,
+      "_id": "78defdce-dbf6-433a-a924-68291dbd66e9",
+      "stationid": "507257fb-0f58-4c43-b186-597ba643fb45"
     }
   ]
 }

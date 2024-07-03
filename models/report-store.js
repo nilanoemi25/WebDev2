@@ -23,6 +23,11 @@ export const reportStore = {
     return db.data.reports.filter((report) => report.stationid === id);
   },
 
+  async getReportByCurrentTime(date){
+    await db.read();
+    return db.data.reports.filter((report) => report.date === date); 
+  },
+
 
   async getReportById(id) {
     await db.read();

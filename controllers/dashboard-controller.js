@@ -10,26 +10,27 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request); 
     const station = await stationStore.getStationsByUserId(loggedInUser._id);
     const alphabetical = Alphabetical.sortStation(station); 
-    /*const reports = await reportStore.getAllReports(); */
-    const sArray = dashAnalysis.getStations(station);  
-    /* const stationAndReps = await stationStore.getStationById(sArray[0]); /* not working */
-    /*const minPressure = Analysis.getMinPressure(station);  */ 
+    const sArray = dashAnalysis.getStations(station);  /*Gets all station Ids */
+    /*Gets all report Ids ISSUE - only iterates one station for some reason*/ 
+    let reportsArray; 
+    for(let i = 0; i< sArray.length; i++){
+     reportsArray = await reportStore.getReportsByStationId(sArray[i]);
+
+    } 
+    /*Gets current time for the reports */
+    let currentTime = dashAnalysis.getCurrentTime(reportsArray); 
+    const currentReport = await reportStore.getReportByCurrentTime(currentTime); 
+    /*const currentPressure = currentReport[0]["pressure"]; 
+    const currentTemp = currentReport[0]["temperature"];
+    const currentWind = currentReport[0]["windspeed"]; 
+    const code = currentReport[0]["code"]; */ 
+
     const viewData = {
       title: "WeatherTop Dashboard",
       station: station, 
       user: loggedInUser, 
-    };
-  
-    /* 
-    let rId; 
-    for(let i = 0; i < sArray.length; i++){
-     rId = await reportStore.getReportsByStationId(sArray[i]);
-     const averagePressure = dashAnalysis.getAveragePressure(rId);  */ /* Pass in station or station ID?  */ 
-
-   /*  } */ 
-    /*console.log(sArray.length);
-    console.log(rId); */ 
-    
+      currentReport: currentReport, 
+    }; 
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     

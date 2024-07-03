@@ -23,7 +23,6 @@ export const stationController = {
       minTemp: minTemp, 
       maxTemp: maxTemp, 
     };
-    
     response.render("station-view", viewData);
   }, 
 
