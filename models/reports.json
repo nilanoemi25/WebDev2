@@ -72,6 +72,16 @@
       "pressure": 4,
       "_id": "78defdce-dbf6-433a-a924-68291dbd66e9",
       "stationid": "507257fb-0f58-4c43-b186-597ba643fb45"
+    },
+    {
+      "date": "2024-07-08T17:05:39.552Z",
+      "code": 600,
+      "temperature": 1,
+      "windspeed": 150,
+      "winddirection": "East",
+      "pressure": 1,
+      "_id": "f769fe70-29ba-47b1-ba55-691468db1ca1",
+      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
     }
   ]
 }

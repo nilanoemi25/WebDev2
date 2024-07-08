@@ -1,6 +1,7 @@
 import { stationStore } from "../models/station-store.js";
 import {reportStore} from "../models/report-store.js"
 import { Analysis} from "../utils/analysis.js";
+import { WeatherIcons } from "../utils/weatherIcons.js";
 
 
 
@@ -22,6 +23,7 @@ export const stationController = {
       maxWind: maxWind, 
       minTemp: minTemp, 
       maxTemp: maxTemp, 
+      
     };
     response.render("station-view", viewData);
   }, 

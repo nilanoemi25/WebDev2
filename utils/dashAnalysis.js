@@ -1,10 +1,6 @@
 
 export const dashAnalysis = {
 
-    /* If the report ID matches one of the reports in the array of reports belonging to the station then get the average
-     First get all reports in to an array then get average 
-    */
-
     getStations(station ){      
     let stationIds; 
        stationIds = station.map(
