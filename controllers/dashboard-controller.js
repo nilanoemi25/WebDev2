@@ -5,6 +5,7 @@ import { Alphabetical } from "../utils/alphabetical.js";
 import { dashAnalysis } from "../utils/dashAnalysis.js";
 import { Analysis } from "../utils/analysis.js";
 
+
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request); 

@@ -82,6 +82,16 @@
       "pressure": 1,
       "_id": "f769fe70-29ba-47b1-ba55-691468db1ca1",
       "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "code": 804,
+      "temperature": 15.51,
+      "windspeed": 4.47,
+      "pressure": 1010,
+      "winddirection": 58,
+      "date": "2024-07-08T17:41:20.387Z",
+      "_id": "3de15e84-5227-4c7a-ad8f-5737833fb0c5",
+      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
     }
   ]
 }
