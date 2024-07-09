@@ -8,7 +8,7 @@ export const ReportController = {
 async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const date = new Date().toISOString();
-    /*const newReport = {
+    const newReport = {
       title: request.body.title,
       date: date, 
       code: Number(request.body.code),
@@ -16,23 +16,14 @@ async addReport(request, response) {
       windspeed: Number(request.body.windspeed),
       winddirection: request.body.winddirection, 
       pressure: Number(request.body.pressure),   
-    }; */ /* UP TO RELEASE 3  */
-    /* RELEASE 4  */
-    let report = {};
-    const result = await axios.get(weatherRequestUrl); 
-    if (result.status == 200) {
-      const currentWeather = result.data;
-      report.code = currentWeather.weather[0].id;
-      report.temperature = currentWeather.main.temp;
-      report.windspeed = currentWeather.wind.speed;
-      report.pressure = currentWeather.main.pressure;
-      report.winddirection = currentWeather.wind.deg;
-      report.date = date; 
-    }
-   
-    console.log(report); 
-    console.log(`adding report ${report.code}`);
-    await reportStore.addReport(station._id, report);
+    };
+    console.log(`adding report ${newReport.code}`);
+    await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
+
+  async addRepApi(request, response){
+    const station = await stationStore.getStationById(request.params.id);
+    response.redirect("/station/" + station._id + "/generate"); 
+  }
 }
