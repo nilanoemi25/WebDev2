@@ -1,3 +1,17 @@
-<form class="box has-text-centered" action="/station/{{station._id}}/addRepApi" method="POST">
+<form class="box has-text-centered" action="/station/{{station._id}}/generate" method="POST">
+      <h2 class="subtitle">Enter location for reading</h2>
+    
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <input class="input" type="text" placeholder="52.160858" name="lat"> LAT 
+          </div>
+          <div class="field">
+            <input class="input" type="text" placeholder="-7.152420" name="lng"> LONG 
+          </div>
+        </div>
+      </div>
       <button class="button is-primary"> Generate Report </button>
 </form>
+
+    

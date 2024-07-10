@@ -21,7 +21,7 @@ export const dashboardController = {
     /*Gets current time for the reports */
     let currentTime = dashAnalysis.getCurrentTime(reportsArray); 
     const currentReport = await reportStore.getReportByCurrentTime(currentTime); 
-    const cReportActual = currentReport[0]; 
+  /*  const cReportActual = currentReport[0]; RELEASE 3 not working 
     const currentPressure = currentReport[0]["pressure"]; /*
     const currentTemp = currentReport[0]["temperature"];
     const currentWind = currentReport[0]["windspeed"]; 
@@ -31,11 +31,11 @@ export const dashboardController = {
       title: "WeatherTop Dashboard",
       station: station, 
       user: loggedInUser, 
-      report: cReportActual, 
-      pressure: currentPressure,  
+      /*report: cReportActual, 
+      pressure: currentPressure,  */ 
     }; 
     
-    console.log(cReportActual); 
+   
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     

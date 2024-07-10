@@ -22,8 +22,4 @@ async addReport(request, response) {
     response.redirect("/station/" + station._id);
   },
 
-  async addRepApi(request, response){
-    const station = await stationStore.getStationById(request.params.id);
-    response.redirect("/station/" + station._id + "/generate"); 
-  }
 }
