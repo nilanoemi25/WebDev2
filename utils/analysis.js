@@ -9,7 +9,7 @@ export const Analysis = {
           }
         }
       }
-      return minPressure; 
+      return minPressure.pressure; 
     },
     getMaxPressure(station) {
         let maxPressure= null;
@@ -20,8 +20,8 @@ export const Analysis = {
               maxPressure = station.reports[i];
             }
           }
-        }
-        return maxPressure; 
+        } /* Remove key value */
+        return maxPressure.pressure; 
       },
     getMinWind(station) { 
     let minWind= null;
@@ -60,6 +60,22 @@ export const Analysis = {
     }
     return minTemp; 
   },
+
+  /* To self: We are better off doing the filter logic and rearranging all reports inside the station to SHOW per date. 
+  getMaxTime(station) { 
+    let maxTime= null;
+    if (station.reports.length > 0) {
+      maxTime = station.reports[0];
+      for (let i = 1; i < station.reports.length; i++) {
+        if (station.reports[i].date < maxTime.date) {
+          maxTime= station.reports[i];
+        }
+      }
+    }
+    return maxTime.date; 
+  }, */ 
+
+
   getMaxTemp(station) {
     let maxTemp= null;
     if (station.reports.length > 0) {
@@ -71,7 +87,7 @@ export const Analysis = {
       }
     }
      return maxTemp; 
-    },
- 
+  },
+
     
   };

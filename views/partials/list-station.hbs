@@ -2,25 +2,24 @@
 {{#each station}}
 <div class="columns is-variable has-text-white  has-background-black">
   <div class="column"> {{>icons/pin}} <br>
-    Lat: {{station.latitude}} <br>
-    Long: {{station.longitude}}
+    Lat: N/A <br>
+    Long: N/A
   </div>
   <div class="column is-1 has-background-white"></div>
-  <div class="column"> Weather {{>icons/thunderstorm}}</div>
+  <div class="column"> Weather <br> Placeholder Icon {{>icons/thunderstorm}} </div>
   <div class="column is-1 has-background-white"></div>
-  <div class="column"> 
-    Temp {{>icons/temp}} <br> 
+  <div class="column"> Temp <br> {{>icons/temp}} <br> 
     Min: {{currentReport.temperature}} <br>
     </div>
   <div class="column is-1 has-background-white"></div>
   <div class="column"> 
-    Wind  {{>icons/wind}} <br>
+    Wind <br>  {{>icons/wind}} <br>
   Min: {{currentReport.windspeed}} <br> 
   </div>
   <div class="column is-1 has-background-white"></div>
   <div class="column"> 
-    Pressure {{>icons/pressure}} 
-    Min: {{viewData.pressure}}  <br>
+    Pressure <br> {{>icons/pressure}} <br> 
+    Min: {{viewData.pressure}} 
  </div>
 
 </div>
