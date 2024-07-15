@@ -2,13 +2,14 @@ import { stationStore } from "../models/station-store.js";
 import {reportStore} from "../models/report-store.js"
 import { Analysis} from "../utils/analysis.js";
 import { Alphabetical} from "../utils/alphabetical.js"; 
-import { WeatherIcons } from "../utils/weatherIcons.js";
 import axios from "axios";
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const reportsByTime = Alphabetical.sortStationTime(station); 
+    let latestWeatherCode = Alphabetical.NotEmptyList(reportsByTime); 
+    let icon = Analysis.getIconFunction(latestWeatherCode); 
     const minPressure = Analysis.getMinPressure(station);
     const maxPressure = Analysis.getMaxPressure(station);
     const minWind = Analysis.getMinWind(station);
@@ -24,9 +25,10 @@ export const stationController = {
       maxWind: maxWind, 
       minTemp: minTemp, 
       maxTemp: maxTemp, 
-      
-      
+     icon: icon, 
+    
     };
+     
     response.render("station-view", viewData);
   }, 
 

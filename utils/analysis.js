@@ -9,7 +9,7 @@ export const Analysis = {
           }
         }
       }
-      return minPressure.pressure; 
+      return minPressure; 
     },
     getMaxPressure(station) {
         let maxPressure= null;
@@ -20,8 +20,8 @@ export const Analysis = {
               maxPressure = station.reports[i];
             }
           }
-        } /* Remove key value */
-        return maxPressure.pressure; 
+        } 
+        return maxPressure; 
       },
     getMinWind(station) { 
     let minWind= null;
@@ -61,20 +61,6 @@ export const Analysis = {
     return minTemp; 
   },
 
-  /* To self: We are better off doing the filter logic and rearranging all reports inside the station to SHOW per date. 
-  getMaxTime(station) { 
-    let maxTime= null;
-    if (station.reports.length > 0) {
-      maxTime = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].date < maxTime.date) {
-          maxTime= station.reports[i];
-        }
-      }
-    }
-    return maxTime.date; 
-  }, */ 
-
 
   getMaxTemp(station) {
     let maxTemp= null;
@@ -88,6 +74,41 @@ export const Analysis = {
     }
      return maxTemp; 
   },
+
+  getIconFunction(latestWeatherCode){
+
+    if(latestWeatherCode >= 200 && latestWeatherCode <= 232){
+      return "11d"; 
+    }
+    else if(latestWeatherCode >= 300 && latestWeatherCode <= 321){
+      return "09d"
+    } 
+    else if(latestWeatherCode >=  500 && latestWeatherCode <= 504){
+      return "10d"
+    }
+    else if(latestWeatherCode >=  511 && latestWeatherCode <= 531){
+      return "09d"
+    }
+    else if(latestWeatherCode >=  600 && latestWeatherCode <= 622){
+      return "13d"
+    }
+    else if(latestWeatherCode >=  701 && latestWeatherCode <= 781){
+      return "50d"
+    }
+    else if(latestWeatherCode >=  800 && latestWeatherCode <= 801){
+      return "01d"
+    }
+    else if(latestWeatherCode >=  802){
+      return "03d"
+    }
+    else if(latestWeatherCode >=  803 && latestWeatherCode <= 804){
+      return "01d"
+    }
+    else{
+      return "01n"
+    }
+      
+  } 
 
     
   };

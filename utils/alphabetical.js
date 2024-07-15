@@ -12,8 +12,23 @@ export const Alphabetical = {
         else if(dateA > dateB) return -1; 
         return 0; 
       }) 
+      if(reports.length > 0){
       return reports; 
+      }
+      else {
+        return null; 
+      }
+     }, 
+
+     NotEmptyList(reportsByTime){
+      if(reportsByTime != null){
+        return reportsByTime[0].code; 
+      }
+      else {
+        return null; 
+      }
      }
+
 
 }
 

@@ -20,26 +20,6 @@
       "date": "2024-07-10T19:12:10.140Z",
       "_id": "f677661e-2531-421a-bda5-54b47e761ade",
       "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
-    },
-    {
-      "date": "2024-07-13T11:59:21.442Z",
-      "code": 520,
-      "temperature": 20,
-      "windspeed": 4,
-      "winddirection": "North",
-      "pressure": 1444,
-      "_id": "1879fd9f-9219-4e82-9f06-39a7337eb1e9",
-      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
-    },
-    {
-      "date": "2024-07-13T12:32:58.192Z",
-      "code": 600,
-      "temperature": 5,
-      "windspeed": 15,
-      "winddirection": "West",
-      "pressure": 1000,
-      "_id": "2a99fdd8-ef9c-4603-9ffe-b183b3aad55c",
-      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
     }
   ]
 }

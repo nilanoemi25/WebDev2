@@ -1,4 +1,6 @@
-export const WeatherIcons = {
+
+
+/*export const WeatherIcons = {
 
     getWeatherCode(station){
         let weathercode = null; 
@@ -9,4 +11,4 @@ export const WeatherIcons = {
         return weathercode; 
     }
 
-}
+} */
