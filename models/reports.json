@@ -20,6 +20,16 @@
       "date": "2024-07-10T19:12:10.140Z",
       "_id": "f677661e-2531-421a-bda5-54b47e761ade",
       "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
+    },
+    {
+      "code": 301,
+      "temperature": 13.63,
+      "windspeed": 3.09,
+      "pressure": 1007,
+      "winddirection": 50,
+      "date": "2024-07-15T19:29:16.263Z",
+      "_id": "022628e1-bb6d-414a-889e-809f3b66ada7",
+      "stationid": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
     }
   ]
 }

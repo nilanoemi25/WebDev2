@@ -3,6 +3,7 @@ import {reportStore} from "../models/report-store.js"
 import { Analysis} from "../utils/analysis.js";
 import { Alphabetical} from "../utils/alphabetical.js"; 
 import axios from "axios";
+const apiKey = "4111bc62708478a8a0233bf6fe177a24";
 
 export const stationController = {
   async index(request, response) {
@@ -32,13 +33,14 @@ export const stationController = {
     response.render("station-view", viewData);
   }, 
 
+  /*
   async generateReport(request,response) {
     const station = await stationStore.getStationById(request.params.id);
     const date = new Date().toISOString();
     let report = {};
     const lat = request.body.lat; 
     const lng = request.body.lng;
-    const latLongRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=4111bc62708478a8a0233bf6fe177a24`;
+    const latLongRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`;
     const result = await axios.get(latLongRequestUrl);
     console.log(latLongRequestUrl)
     if (result.status == 200) {
@@ -62,6 +64,31 @@ export const stationController = {
 
     };
     await reportStore.addReport(station._id, report); 
+    response.render("generate-view", viewData);
+  }, */ 
+
+   
+  async generateReport(request,response) {
+    console.log("rendering new report");
+    let report = {};
+    const lat = request.body.lat || "52.2502793";
+    const lng = request.body.lng || "-7.1177689";
+    const latLongRequestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`;
+    const result = await axios.get(latLongRequestUrl);
+    if (result.status == 200) {
+      report.tempTrend = [];
+      report.trendLabels = [];
+      const trends = result.data.list;
+      for (let i=0; i<10; i++) {
+        report.tempTrend.push(trends[i].main.temp);
+        report.trendLabels.push(trends[i].dt_txt);
+      }
+    }
+    
+    const viewData = {
+      title: "Weather Report",
+      reading: report,
+    };
     response.render("generate-view", viewData);
   },
 
