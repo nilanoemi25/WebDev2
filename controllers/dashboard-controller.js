@@ -35,7 +35,7 @@ export const dashboardController = {
       pressure: currentPressure,  */ 
     }; 
     
-   
+
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     

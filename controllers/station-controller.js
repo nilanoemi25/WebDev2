@@ -64,7 +64,7 @@ export const stationController = {
 
     };
     await reportStore.addReport(station._id, report); 
-    response.render("generate-view", viewData); response.redirect("/");  
+    response.render("generate-view", viewData); 
   }, 
 
    

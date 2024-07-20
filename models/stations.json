@@ -14,6 +14,20 @@
       "longitude": 112,
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
       "_id": "507257fb-0f58-4c43-b186-597ba643fb45"
+    },
+    {
+      "title": "Test",
+      "latitude": 51.8985,
+      "longitude": 8.4756,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "8b7e8377-4e68-47dc-b655-cb10ca57fb42"
+    },
+    {
+      "title": "G",
+      "latitude": 51.8985,
+      "longitude": 8.4756,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "b5c42872-9044-41fc-b757-ca61e85bafbd"
     }
   ]
 }
