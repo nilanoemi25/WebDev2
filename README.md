@@ -2,7 +2,7 @@
 HDip 1st year, Web Development 2, Assignment Project
 
 ##Weather App
-Project Description
+###Project Description
 This project is part of continuous assessment for WD2 and is based on server side scripting. It is built with Node and Express and is the first time I have used these technologies. Aiming for high 2.1 or 1.
 
 ###Usage
