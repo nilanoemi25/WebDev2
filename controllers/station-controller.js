@@ -33,8 +33,8 @@ export const stationController = {
     response.render("station-view", viewData);
   }, 
 
-  /*
-  async generateReport(request,response) {
+  
+  async generateReportCurrent(request,response, next) {
     const station = await stationStore.getStationById(request.params.id);
     const date = new Date().toISOString();
     let report = {};
@@ -64,11 +64,11 @@ export const stationController = {
 
     };
     await reportStore.addReport(station._id, report); 
-    response.render("generate-view", viewData);
-  }, */ 
+    response.render("generate-view", viewData); response.redirect("/");  
+  }, 
 
    
-  async generateReport(request,response) {
+   async generateReport(request,response) {
     console.log("rendering new report");
     let report = {};
     const lat = request.body.lat || "52.2502793";
@@ -89,8 +89,8 @@ export const stationController = {
       title: "Weather Report",
       reading: report,
     };
-    response.render("generate-view", viewData);
-  },
+    response.render("generate-view", viewData); /* Make another call here to this.generateReportCurrent? */ 
+  },  
 
   async deleteReport(request, response) {
     const stationId = request.params.stationid;

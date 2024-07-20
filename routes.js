@@ -19,6 +19,7 @@ router.get("/about", aboutController.index);
 router.post("/dashboard/addlocation", dashboardController.addStation);
 router.get("/station/:id", stationController.index);
 router.post("/station/:id/addreport", ReportController.addReport);
+router.put("/station/:id/generate", stationController.generateReportCurrent); 
 router.post("/station/:id/generate", stationController.generateReport); 
 router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
 router.get("/station/:stationid/deletereport/:reportid", stationController.deleteReport);
