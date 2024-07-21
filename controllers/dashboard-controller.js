@@ -13,19 +13,23 @@ export const dashboardController = {
     const alphabetical = Alphabetical.sortStation(station); 
     const sArray = dashAnalysis.getStations(station);  /*Gets all station Ids */
     /*Gets all report Ids ISSUE - only iterates one station for some reason*/ 
-    let reportsArray; 
+   /* let reportsArray = []; 
     for(let i = 0; i< sArray.length; i++){
-     reportsArray = await reportStore.getReportsByStationId(sArray[i]);
+     let reports = await reportStore.getReportsByStationId(sArray[i]);
+     reportsArray.push(reports);
+    } */ 
 
-    } 
+
     /*Gets current time for the reports */
-    let currentTime = dashAnalysis.getCurrentTime(reportsArray); 
-    const currentReport = await reportStore.getReportByCurrentTime(currentTime); 
+  /*  let currentTime = dashAnalysis.getCurrentTime(reportsArray); 
+    const currentReport = await reportStore.getReportByCurrentTime(currentTime); */
   /*  const cReportActual = currentReport[0]; RELEASE 3 not working 
     const currentPressure = currentReport[0]["pressure"]; /*
     const currentTemp = currentReport[0]["temperature"];
     const currentWind = currentReport[0]["windspeed"]; 
     const code = currentReport[0]["code"]; */ 
+
+
     let reportsArrayForMap = [];  
     for(let i =0; i<station.length; i++){
     let obj = {};
@@ -40,11 +44,10 @@ export const dashboardController = {
       station: station, 
       user: loggedInUser, 
       reportsArrayForMap: reportsArrayForMap, 
-      /*report: cReportActual, 
-      pressure: currentPressure,  */ 
+  
     }; 
     
-   console.log(viewData); 
+   console.log(test);
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     

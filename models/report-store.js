@@ -18,6 +18,7 @@ export const reportStore = {
     return report;
   },
 
+  /* Not Working Correctly */ 
   async getReportsByStationId(id) {
     await db.read();
     return db.data.reports.filter((report) => report.stationid === id);
