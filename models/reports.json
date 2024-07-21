@@ -1,4 +1,15 @@
 {
   "file": "./models/reports.json",
-  "reports": []
+  "reports": [
+    {
+      "date": "2024-07-21T13:13:51.229Z",
+      "code": 100,
+      "temperature": 5,
+      "windspeed": 100,
+      "winddirection": "West",
+      "pressure": 5,
+      "_id": "01c7e189-9044-4612-91e1-54eeb252e069",
+      "stationid": "0edba297-fc26-4d5e-a3ec-461b2c89fdfd"
+    }
+  ]
 }

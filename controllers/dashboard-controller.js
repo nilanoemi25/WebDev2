@@ -47,7 +47,7 @@ export const dashboardController = {
   
     }; 
     
-   console.log(test);
+ 
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     
