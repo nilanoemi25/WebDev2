@@ -26,16 +26,25 @@ export const dashboardController = {
     const currentTemp = currentReport[0]["temperature"];
     const currentWind = currentReport[0]["windspeed"]; 
     const code = currentReport[0]["code"]; */ 
+    let reportsArrayForMap = [];  
+    for(let i =0; i<station.length; i++){
+    let obj = {};
+    obj.name = station[i].title; 
+    obj.latitude = station[i].latitude; 
+    obj.longitude = station[i].longitude; 
+    reportsArrayForMap.push(obj); 
+    } 
 
     const viewData = {
       title: "WeatherTop Dashboard",
       station: station, 
       user: loggedInUser, 
+      reportsArrayForMap: reportsArrayForMap, 
       /*report: cReportActual, 
       pressure: currentPressure,  */ 
     }; 
     
-
+   console.log(viewData); 
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
     

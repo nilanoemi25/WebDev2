@@ -2,13 +2,6 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "Armagh",
-      "latitude": 0,
-      "longitude": 0,
-      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
-      "_id": "70d99423-1b7a-4bdf-91da-db7aa12910e9"
-    },
-    {
       "title": "Waterford",
       "latitude": 225,
       "longitude": 112,
@@ -23,11 +16,18 @@
       "_id": "8b7e8377-4e68-47dc-b655-cb10ca57fb42"
     },
     {
-      "title": "G",
+      "title": "Cork ",
       "latitude": 51.8985,
       "longitude": 8.4756,
       "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
-      "_id": "b5c42872-9044-41fc-b757-ca61e85bafbd"
+      "_id": "0edba297-fc26-4d5e-a3ec-461b2c89fdfd"
+    },
+    {
+      "title": "Galway",
+      "latitude": 53.274,
+      "longitude": 9.0513,
+      "userid": "132cb9a6-f715-47c3-9075-fd646479bfbd",
+      "_id": "ef6166d6-93a8-4c3a-8e3e-b5407ae22ff8"
     }
   ]
 }
